@@ -51,7 +51,7 @@ spec:
         - devapi.runtimemachines.com
       secretName: devapi-tls-secret
   rules:
-    - host: adevapi.runtimemachines.com
+    - host: devapi.runtimemachines.com
       http:
         paths:
           - path: /(.*)
