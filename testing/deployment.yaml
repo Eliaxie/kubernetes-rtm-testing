@@ -49,7 +49,6 @@ spec:
       secretName: devapi-tls-secret
   rules:
     - host: adevapi.runtimemachines.com
-spec:
   rules:
   - http:
       paths:
