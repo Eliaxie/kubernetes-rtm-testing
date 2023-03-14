@@ -46,7 +46,21 @@ metadata:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod-issuer
 spec:
+ tls:
+    - hosts:
+        - devapi.runtimemachines.com
+      secretName: devapi-tls-secret
   rules:
+    - host: devapi.runtimemachines.com
+      http:
+        paths:
+          - path: /(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: aks-helloworld-one
+                port:
+                  number: 80
     - http:
         paths:
           - path: /(.*)
