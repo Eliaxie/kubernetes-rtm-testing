@@ -49,13 +49,12 @@ spec:
       secretName: devapi-tls-secret
   rules:
     - host: adevapi.runtimemachines.com
-  rules:
-  - http:
-      paths:
-      - path: /(.*)
-        pathType: Prefix
-        backend:
-          service:
-            name: aks-helloworld-one
-            port:
-              number: 80
+      http:
+        paths:
+        - path: /(.*)
+          pathType: Prefix
+          backend:
+            service:
+              name: aks-helloworld-one
+              port:
+                number: 80
