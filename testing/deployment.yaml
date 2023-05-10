@@ -47,10 +47,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - devapi.runtimemachines.com
+        - devapi.wowen.io
       secretName: devapi-tls-secret
   rules:
-    - host: devapi.runtimemachines.com
+    - host: devapi.wowen.io
       http:
         paths:
           - path: /(.*)
